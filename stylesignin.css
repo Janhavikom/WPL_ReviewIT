@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Signika+Negative:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .zoom {
+    zoom: 150%;
+  } */
+
+body,input{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("Landing.png"); */
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-width:300px;
+  
+}
+
+.container{
+    position: relative;
+    width: 65vw;
+    height: 70vh;
+    background-color:#ba0001;
+    overflow: hidden;
+    top: 125px;
+    border-radius: 30px;
+    background-position: fixed;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(11, 139, 139); */
+    background-image: url('bg6.png');
+    z-index: 6;
+    left: -50%;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+}
+
+.signin-signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+   
+}
+
+.signin-form{
+    background-attachment: fixed;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    min-width: 238px; 
+    padding: 0 10px;
+}
+
+.title{
+    font-size: 2.2rem;
+    color: rgb(248, 241, 241);
+    margin-bottom: 10px;
+    /* font-family: 'Abril Fatface', cursive; */
+}
+
+.content-title{
+    font-size: 1.75vw;
+}
+
+.content-body{
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.input-field{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.input-field i{
+    text-align: center;
+    line-height: 50px;
+    color: #acacac;
+    font-size: 1.5rem;
+}
+
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+
+.btn{
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #202020;
+    color: white;
+    text-transform: uppercase;
+    margin: 10px 0;
+    transition: all 0.5s;
+    font-size: 17px;
+}
+
+.btn:hover{
+    background-color: rgb(53, 59, 65);
+    color: white;
+}
+
+
+.btn1{
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #dfdbdb;
+    color: rgb(7, 4, 4);
+    opacity: 70%;
+    text-transform: uppercase;
+    margin: 10px 0;
+    transition: all 0.5s;
+    font-size: 17px;
+    font-weight:bolder;
+}
+
+.btn1:hover{
+    background-color: #ba0001;
+    
+    color: white;
+}
+
+.social-text{
+    padding: 0.7rem 0;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon{
+    height: 50px;
+    width: 50px;
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none ;
+    color: rgb(255, 242, 242);
+    font-size: 2.2rem;
+    transition: all 0.5s ;
+}
+
+.social-icon-f :hover{
+color: rgb(30, 108, 182);
+border-color: rgb(30, 108, 182);
+}
+.social-icon-i :hover{
+    color: rgb(224, 151, 185);
+    border-color: rgb(224, 151, 185);
+    }
+.social-icon-t :hover{
+        color: rgb(11, 139, 139);
+        border-color: rgb(11, 139, 139);;
+        }
+.social-icon-s :hover{
+            color: rgb(231, 197, 4);
+            border-color: rgb(231, 197, 4);
+            }
+                        
+            .social-icon-g :hover{
+                color: rgb(19, 209, 44);
+                border-color: rgb(19, 209, 44);
+                }
+
+.panels-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.panel{
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35%;
+    min-width: 238px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.content{
+    color: #f0f0f0;
+
+}
+.container.sign-up-mode::before{
+    transform: translateX(0);
+}
+
+.container.sign-up-mode .right-panel .content{
+    transform: translateX(200%);
+}
+
+.container.sign-up-mode .left-panel .content{
+    transform: translateX(0);
+}
+.left-panel .content{
+    transform: translateX(-200%);
+}
+
+.right-panel .content{
+    transform: translateX(0);
+}
+
+.left-panel{
+    pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel{
+    pointer-events: none;
+}
+
+
+.container.sign-up-mode .left-panel{
+    pointer-events: all;
+}
